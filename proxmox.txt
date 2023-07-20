@@ -1,0 +1,212 @@
+boot proxmox-ve_8.0-2.iso
+Boot Screen, uses grub without serial console, OCR Output is:
+Proxmox YE 8.0 (iso release 2) - https://www.proxmox.coms
+
+X PROXMOX
+
+Welcome to Proxmox Virtual Environment
+
+Install Proxmox VE (Graphical)
+Install Proxmox VE (Console)
+
+Advanced Options
+
+enter: select, arrow keys: navigate, esc: back
+
+discernible options are:
+Install Proxmox VE (Graphical)
+Install Proxmox VE (Console)
+Advanced Options
+
+down arrow then enter to select console install, mostly diagnostic output at this stage, OCR Output shows:
+Helcome to the Proxmox VE 8.0 installer
+
+initial setup startup
+
+mounting proc filesystem
+
+mounting sys filesystem
+
+EFI boot mode detected, mounting efivars filesystem
+
+boot comandline: BOOT_IMAGE=/boot/linux26 ro ramdisk_size=16777216 rw quiet spla
+"["Floading drivers: ahci gemu_fw_cfg mac_hid virtio_blk i2c_i8e1 xhci_pci efi_
+_cstate rapl aesni_intel shaS12_ssse3 ghash_clmulni_intel polyval_clmulni crc32_
+ing intel_rapl_common
+
+modprobe: ERROR: could not insert 'intel_cstate': No such device
+
+modprobe: ERROR: could not insert 'intel_tcc_cooling': No such device
+
+searching for block device containing the IS0 proxmox-ve-8.0-2
+
+with IS0 ID 'S7b451e6-116c-1lee-B1e7-53be6f85h90a"
+
+testing device 'sdevssre' for ISO
+
+found Proxmox VE ISO
+
+switching root from initrd to actual installation system
+
+Starting Proxmox installation
+
+EFI boot mode detected, mounting efivars filesystem
+
+Installing additional hardware drivers
+
+Starting hotplug events dispatcher: systemd-udevd.
+
+synthesizing the initial hotplug events (subsystems)...done.
+
+Sunthesizing the initial hotplug events (devices)...done.
+
+Haiting for sdev to be fully populated..._
+
+Eula stage, OCR Shows:
+| Proxmox VE (8.0-2) Installer |
+
+END USER LICENSE AGREEMENT (EULA)
+
+END USER LICENSE AGREEMENT (EULA) FOR PROXMOX VIRTUAL ENVIRONMENT (PROXMOX VE)
+
+By using Proxmox VE software you agree that you accept this EULA, and that you have read and understand the
+terms and conditions. This also applies for individuals acting on behalf of entities. This EULA does not provide
+any rights to Support Subscriptions Services as software maintenance, updates and support. Please review the
+Support Subscriptions Agreements for these terms and conditions. The EULA applies to any version of Proxmox VE
+and any related update, source code and structure (the Programs), regardless of the delivery mechanism.
+
+1. License. Proxmox Server Solutions GmbH (Proxmox) grants to you a perpetual, worldwide license to the Programs
+pursuant to the GNU Affero General Public License V3. The license agreement for each component is located in the
+software component's source code and permits you to run, copy, modify, and redistribute the software component
+(certain obligations in some cases), both in source code and binary code forms, with the exception of certain
+binary only firmware components and the Proxmox images (e.g. Proxmox logo). The license rights for the binary
+only firmware components are located within the components. This EULA pertains solely to the Programs and does
+not limit your rights under, or grant you rights that supersede, the license terms of any particular component.
+
+2. Limited Warranty. The Programs and the components are provided and licensed '"as is' without warranty of any
+kind, expressed or implied, including the implied warranties of merchantability, non-infringement or fitness for
+a particular purpose. Neither Proxmox nor its affiliates warrants that the functions contained in the Programs
+will meet your reguirements or that the operation of the Programs will be entirely error free, appear or perform
+precisely as described in the accompanying documentation, or comply with regulatory reguirements.
+
+|
+I
+3. Limitation of Liability. To the maximum extent permitted under applicable law, under no circumstances will |
+Proxmox, its affiliates, any Proxmox authorized distributor, or the licensor of any component provided to you |
+under this EULA be liable to you for any incidental or consequential damages, including lost profits or lost |
+savings arising out of the use or inability to use the Programs or any component, even if Proxmox, its |
+affiliates, an authorized distributor and/or licensor has been advised of the possibility of such damages. In no |
+event shall Proxmox's or its affiliates' liability, an authorized distributor's liability or the liability of |
+the licensor of a component provided to you under this EULA exceed the amount that you paid to Proxmox under
+this EULA.
+|
+|
+
+4. Intellectual Property Rights. The Programs and each components are owned by Proxmox and other licensors and
+
+<Abort> <I agree>
+discernible options are:
+Abort, I Agree
+Enter to agree to eula
+Disk Select Stage, OCR Shows:
+Target harddisk:
+
+<Abort>
+
+Proxmox VE (8.0-2) Installer
+
+<
+
+/dev/vda (500.00 GiB)
+
+>
+
+<Advanced options>
+
+<Previous>
+
+enter to select /dev/vda as install disk
+discernible options are:
+/dev/vda (500.00 GiB), default
+Down arrow for Advanced options
+Possibly Tab for Abort, 2 Tab for Previous
+Regional Stage, OCR Shows:
+| Proxmox VE (8.0-2) Installer |
+
+Country: < United States
+
+Timezone: < America/Adak
+
+Keyboard layout: < U.S. English
+<Abort>
+
+<Previous>
+discernible options are:
+Next, Default, may be indicated visually somehow?
+Tab once for country, twice for time zone, three times for keyboard, enter to select, doing this non visually will flat out suck the back end of an elephant, since each one of these brings up a sub list which blends in with the installer UI behind it, confusing both curses capable screen readers and OCR!
+enter to set country, United States/Timezone/Apak, Keyboard Layout/U.S Englishh
+Administration Stage, OCR Shows:
+mail@example. invalid
+discernible options are:
+None!
+type root password, down arrow, retype same password, down arrow, backspace 20 times, type administrator email address, tab 3 times, enter
+Network Stage, OCR Shows:
+Management interface:
+
+Hostname (FQDN) :
+IP address (CIDR):
+Gateway address:
+DNS server address:
+
+<Abort>
+
+Proxmox VE (8.0-2) Installer
+
+<
+
+£npos3
+
+<Previous>
+discernible options are:
+Management interface:
+Hostname (FQDN) :
+IP address (CIDR):
+Gateway address:
+DNS server address:
+Most controls iin this stage appear to be fake edit boxes, the only required option is hostname, entered in FQDN format
+Tab twice for hostname field, backspace 19 times, type hostname in FQDN format, tab 7 times, enter
+Confirmation Stage, OCR Shows:
+| Proxmox VE (8.0-2) Installer |
+
+_ Ontion | selected value )
+I 1
+
+Bootdisk filesystem extd
+
+Bootdisk(s) /dev/vda
+
+Timezone America/Adak
+
+Keyboard layout U.S. English
+
+Administator email admin@pve.local
+
+Management interface enpes3
+
+Hostname pve.local
+
+Host IP (CIDR) 10.0.2.15/24
+
+Gateway 10.0.2.2
+
+DNS 10.0.2.3
+
+[%¥] Automatically reboot after successful installation
+<Abort> <Install>
+Tab once, enter
+What Proxmox could do better:
+Add Audio Drivers!
+Add espeakup package, interface between speakup kernel-based screen reader and espeak-ng software speech synthesis, this is not difficult, since both speakup and speakup_soft modules are already in your kernel
+Add serial console support, simply add console=ttyS0,115200 and make sure that if said parameter is present, spawn a getty to handle it
+add brltty for both hearing and visually impaired individuals to use braille devices
+Fix your installer TUI to not spawn windows on top of other windows, i.e. error messages indicating missing or invalid information on top of the form requesting that information, this confuses both OCR and curses capable screen readers such as orca
